@@ -1,0 +1,48 @@
+<table>
+  <tr style="background: red">
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+
+  <tr style="text-align: center;background: grey">
+    <td>price.id</td>
+    <td>price.item</td>
+    <td>price.price</td>
+    <td>price.status</td>
+  </tr>
+  {% for price in nav.prices %}
+    {% if price.id == NUN or price.item == NUN or price.price == NUN %}
+      <tr>
+        <td style="padding: 20px;">
+          <p>{% if price.id == NUN %} <span
+              style="color: red;">non</span> {% else %} {{ price.id }} {% endif %}
+          </p>
+        </td>
+        <td style="padding: 20px;">
+          <p>{% if price.item == NUN %} <span
+              style="color: red;">non</span> {% else %} {{ price.item }} {% endif %}
+          </p>
+        </td>
+        <td style="padding: 20px;">
+          <p>{% if price.price == NUN %} <span
+              style="color: red;">non</span> {% else %} {{ price.price }}$ {% endif %}
+          </p>
+        </td>
+        <td style="padding: 20px;">Error:
+          {% if price.id == NUN %} id, {% endif %}
+          {% if price.item == NUN %} item, {% endif %}
+          {% if price.price == NUN %} price, {% endif %}
+        </td>
+      </tr>
+    {% else %}
+      <tr>
+        <td style="padding: 20px;"><p>{{ price.id }}</p></td>
+        <td style="padding: 20px;"><p>{{ price.item }}</p></td>
+        <td style="padding: 20px;"><p>{{ price.price }}$</p></td>
+        <td style="padding: 20px;"><p> Done! </p></td>
+      </tr>
+    {% endif %}
+  {% endfor %}
+</table>
