@@ -1,0 +1,14 @@
+name: Tajam
+description: Drupal 8: Tajam theme
+type: theme
+core: 8.x
+libraries:
+  - tajam/global-css
+  - tajam/global-js
+stylesheets-remove:
+  - core/themes/stable/css/system/components/align.module.css
+  - core/themes/stable/css/views/views.module.css
+regions:
+  header: 'Header'
+  content: 'Main content'
+  footer: 'Footer'

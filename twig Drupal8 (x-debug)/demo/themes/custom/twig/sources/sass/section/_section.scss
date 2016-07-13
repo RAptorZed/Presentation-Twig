@@ -1,0 +1,19 @@
+.section_node{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  @include page-container();
+  font-family: $font-roboto;
+  .section-image{
+    text-align: center;
+  }
+  .section-title{
+    text-align: center;
+    padding: 20px 0;
+    font-size: 25px;
+  }
+  .section-body{
+    font-size: 15px;
+    text-indent: 20px;
+    line-height: 20px;
+  }
+}
